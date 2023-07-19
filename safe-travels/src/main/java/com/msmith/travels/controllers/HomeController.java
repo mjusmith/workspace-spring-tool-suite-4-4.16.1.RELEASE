@@ -30,6 +30,7 @@ public class HomeController {
 		model.addAttribute("newTravel", new Travel());
 		return"dashboard.jsp";
 	}
+	
 	// create form process for combined w/ findAll
 	@PostMapping("/travel-dash")
 	public String processCreateMain(@Valid @ModelAttribute("newTravel") Travel newTravel, BindingResult result,
@@ -77,26 +78,5 @@ public class HomeController {
 		return "redirect:/travel-dash";
 	}
 	
-	// create
-//	@PostMapping("/travel/create")
-//	public String processCreate(@Valid @ModelAttribute("newTravel")
-//			BindingResult result
-//			)	{
-//		if(result.hasErrors()) {
-//			System.out.println(result.getAllErrors());
-//			return "dashboard.jsp";
-//		}
-//		else {
-//			travelService.createTravel(newTravel);
-//			return "redirect:/travel-dash";
-//		}
-//	}
-//	 findAll
-//	@GetMapping("/travels")
-//	public String getTravels(Model model) {
-//		List<Travel> travelList = travelService.allCosts();
-//		model.addAttribute("travelList", travelList);
-//		return"dashboard.jsp";
-//	}
 	
 }

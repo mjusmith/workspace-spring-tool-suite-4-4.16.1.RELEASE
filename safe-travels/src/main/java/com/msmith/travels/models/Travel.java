@@ -59,6 +59,7 @@ public class Travel {
     
     // Zero-Argument constructor
     public Travel() {}
+    
     // Maybe overloaded constructor if we need it
     public Travel(String expense, String vendor, Double amount, String description) {
     	this.expense = expense;

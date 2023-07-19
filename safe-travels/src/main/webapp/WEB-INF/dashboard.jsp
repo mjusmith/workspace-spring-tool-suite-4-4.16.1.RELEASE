@@ -31,10 +31,10 @@
 					<td><c:out value="${eachTravel.vendor}"/></td>
 					<td><c:out value="${eachTravel.amount}"/></td>
 					<td><a href="/travel/${eachTravel.id}/edit">edit</a></td>
-					<form action="/travel/${eachTravel.id }" method="post">
+					<td><form action="/travel/${eachTravel.id }" method="post">
 					<input type="hidden" name="_method" value="delete"/>
-					<td><button type="submit">DELETE</button></td>
-					</form>
+					<button type="submit">DELETE</button>
+					</form></td>
 				</tr>
 			</c:forEach>
 		</tbody>
